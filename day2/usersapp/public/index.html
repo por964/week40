@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="main">
+     
+      <div id="1">
+        <br>
+        <br>
+        <br>
+        <table>
+          <thead><tr><th>ID</th><th>NAME</th><th>AGE</th><th>GENDER</th><th>EMAIL</th></tr></thead>
+          <tbody id="tb"></tbody>
+        </table>
+        <button id="btnIdAll">Get all users</button><div id="divId"></div>
+      </div>
+      <br>
+      <br>
+      <div id="2">
+      <input type="text" id="inpId"><button id="btnId">Get user by id</button><div id="divId2"></div>
+      </div>
+      <br>
+      <br>
+      <div id="3">
+        <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="age">Age:</label><br>
+  <input type="number" id="age" name="age"><br><br>
+  <label for="gender">Gender:</label><br>
+  <input type="text" id="gender" name="gender"><br><br>
+  <label for="email">Mail:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <br>
+        <button id="addUsr">Add new user</button>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div id="4">
+        <button id="updtUsr">Update user no:</button>
+        <br>
+        <label for="usrid">ID# (only for update):</label><br>
+        <input type="number" id="usrid" name="id">
+        <br>
+        <br>
+        <button id="sendupdt">Submit update:</button>
+      </div>
+      <br>
+      <div id="5">
+        <button id="deleteusr">Delete user</button>
+        <br>
+        <label for="usrid">ID to be deleted:</label><br>
+        <input type="number" id="deleteid" name="id">
+        <br>
+        <br>
+        
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
