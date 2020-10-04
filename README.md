@@ -4,7 +4,9 @@ Tueday = day1
 
 Wednesday = day 2
 
-Thursday+friday = JPArest and links below
+Thursday = JPArest and links below
+
+Friday = EuropeMap
 
 Link to REST with JAX RS part 4 deployed project: 
 
