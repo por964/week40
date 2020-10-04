@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/por964/Flow2-wk2-JPA-CORS.svg?branch=master)](https://travis-ci.org/por964/Flow2-wk2-JPA-CORS)
+https://travis-ci.org/por964/spa-week40
 
 Tueday = day1
 
