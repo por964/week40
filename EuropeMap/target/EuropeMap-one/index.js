@@ -1,14 +1,14 @@
 let url = 'http://restcountries.eu/rest/v1/alpha?codes=';
 
 const showCountry = async () => {
-                let countries = document.getElementsByTagName("path");
-            for (let state of countries) {
-                state.setAttribute('style', 'fill:#c0c0c0;stroke:#ffffff;stroke-width:0.40000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none');
-            }
+    let countries = document.getElementsByTagName("path");
+    for (let state of countries) {
+        state.setAttribute('style', 'fill:#c0c0c0;stroke:#ffffff;stroke-width:0.40000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none');
+    }
     let country = event.target.id;
     event.target.setAttribute('style', 'fill: blue');
     let url2 = url + country;
-    
+
     const userResponse = await fetch(`${url2}`);
     const userData = await fetchWithErrorCheck(userResponse);
 
@@ -18,12 +18,15 @@ const showCountry = async () => {
         const obj2 = Object.values(obj);
         //let result = country.translations.map(a => a.foo);
 
-        return `Name: ${country.name} \n Population: ${country.population} \n Capital: ${country.capital} 
-                        \n Alternative names: ${country.altSpellings} \n Borders: ${country.borders} 
-                        \n Translations: ` + obj2;
+        return`Name: ${country.name}\nPopulation: ${country.population}\nCapital: ${country.capital}Alpha2Code: ${country.alpha2Code}
+Area: ${country.area}
+Gini: ${country.gini}
+Native name: ${country.nativeName}
+Alternative names: ${country.altSpellings}\nBorders: ${country.borders} 
+Translations: `.trim() + Object.values(obj);
     });
     console.log(data);
-    alert (data);
+    alert(data);
 };
 
 document.getElementById("svg2").addEventListener("click", showCountry, false);
@@ -35,4 +38,3 @@ function fetchWithErrorCheck(res) {
     return res.json();
 }
 ;
-
