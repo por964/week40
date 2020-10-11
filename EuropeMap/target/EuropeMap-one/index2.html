@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Template literals</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <button id="myBtn">Without template literals</button>
+        <br>
+        <br>
+        <button id="myBtn2">With template literals</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", myFunction);
+
+document.getElementById("myBtn2").addEventListener("click", myFunction2);
+
+function myFunction() {
+        const strlit = 'This \nis \n\nwithout \ntemplate literals';
+  alert(strlit);
+  };
+
+function myFunction2() {
+    const strlit2 = `This
+is
+
+with
+template literals`;
+  alert(strlit2);
+}
+</script>
+    </body>
+</html>

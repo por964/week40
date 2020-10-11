@@ -1,5 +1,4 @@
 let url = 'http://restcountries.eu/rest/v1/alpha?codes=';
-
 const showCountry = async () => {
     let countries = document.getElementsByTagName("path");
     for (let state of countries) {
@@ -18,12 +17,16 @@ const showCountry = async () => {
         const obj2 = Object.values(obj);
         //let result = country.translations.map(a => a.foo);
 
-        return`Name: ${country.name}\nPopulation: ${country.population}\nCapital: ${country.capital}Alpha2Code: ${country.alpha2Code}
+        return`      Name: ${country.name}
+Population: ${country.population}
+Capital: ${country.capital}
+Alpha2Code: ${country.alpha2Code}
 Area: ${country.area}
 Gini: ${country.gini}
 Native name: ${country.nativeName}
-Alternative names: ${country.altSpellings}\nBorders: ${country.borders} 
-Translations: `.trim() + Object.values(obj);
+Alternative names: ${country.altSpellings}
+Borders: ${country.borders} 
+Translations: `.trim() + obj2;
     });
     console.log(data);
     alert(data);
